@@ -23,7 +23,7 @@ jobs:
         id: get-latest-tag
         run: |
           LATEST_TAG=$(curl -s -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
-            "https://api.github.com/repos/${{ github.repository }}/releases/latest" | jq -r .tag_name)
+            "https://api.github.com/repos/caddyserver/caddy/releases/latest" | jq -r .tag_name)
           echo "LATEST_TAG=$LATEST_TAG" >> $GITHUB_OUTPUT
         shell: bash
 
