@@ -41,7 +41,7 @@ jobs:
           images: ghcr.io/${{ github.repository }}
           tags: |
             type=raw,value=latest
-          # Excluded: type=raw,value=${{ steps.get-latest-tag.outputs.LATEST_TAG }}
+            type=raw,value=${{ steps.get-latest-tag.outputs.LATEST_TAG }}
 
       - name: Build and push Docker image
         uses: docker/build-push-action@v7
